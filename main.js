@@ -1,6 +1,9 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron')
 const DataStore = require('./renderer/MusicDataStore')
 
+// ...
+console.log('user-data: ', app.getPath('userData'));
+
 const myStore = new DataStore({'name': 'Music Data'})
 
 class AppWindow extends BrowserWindow {
