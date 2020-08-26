@@ -1,4 +1,4 @@
-# Simple music player
+# Electron music player
 
 **本项目使用 Electron 完成了一个简单的本地音乐播放器**
 
@@ -19,6 +19,6 @@ npm start
 项目打包成 App
 
 ```bash
-npm run dist
+npm run build
 ```
 
