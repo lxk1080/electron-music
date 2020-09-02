@@ -22,6 +22,8 @@ class AppWindow extends BrowserWindow {
 }
 
 app.on('ready', () => {
+  // require('devtron').install();
+
   const mainWindow = new AppWindow({}, './renderer/index.html')
   mainWindow.webContents.on('did-finish-load',() => {
     mainWindow.send('getTracks', myStore.getTracks())

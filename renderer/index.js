@@ -1,4 +1,5 @@
 const { ipcRenderer } = require('electron');
+// const { BrowserWindow } = require('electron').remote;
 const { $, convertDuration } = require('./helper');
 let musicAudio = new Audio();
 let allTracks;
@@ -6,6 +7,9 @@ let currentTrack;
 
 $('add-music-button').addEventListener('click', () => {
   ipcRenderer.send('add-music-window');
+
+  // const win = new BrowserWindow({ width: 800, height: 600 });
+  // win.loadURL('https://baidu.com');
 });
 
 const renderListHTML = (tracks) => {
